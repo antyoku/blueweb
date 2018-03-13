@@ -7,6 +7,7 @@ const imagemin = require('gulp-imagemin');
 const watch = require('gulp-watch');
 const template = require('gulp-template');
 const plumber = require('gulp-plumber');
+const webpack = require('webpack-stream');
 const browserSync = require('browser-sync').create();
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
@@ -37,15 +38,27 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('js', () =>
-  gulp.src('./src/js/**/*.js')
-    .pipe(plumber())
-    .pipe(concat('script.js'))
-    .pipe(babel({
-      presets: ['env'],
+gulp.task('js', () => {
+  return gulp.src('./src/js/entry.js')
+    .pipe(webpack({
+      module: {
+        loaders: [
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+            query: {
+              presets: ['es2015'],
+            },
+          },
+        ],
+      },
+      output: {
+        filename: 'bundle.js',
+      },
     }))
-    .pipe(gulp.dest('dist/'))
-);
+    .pipe(gulp.dest('dist/'));
+});
 
 gulp.task('image', () =>
   gulp.src('./src/images/**/*')
