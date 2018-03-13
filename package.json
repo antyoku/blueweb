@@ -1,0 +1,30 @@
+{
+  "name": "foundation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Update-hub/foundation.git",
+  "author": "Daichi Ninomiya <daichi.ninomiya@deer.co.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.6",
+    "file-exists": "^5.0.1",
+    "get-csv": "^3.0.3",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-favicons": "^2.2.7",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-pug-linter": "^0.5.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-template": "^5.0.0",
+    "gulp-watch": "^5.0.0"
+  }
+}
