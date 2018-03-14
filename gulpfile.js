@@ -64,12 +64,7 @@ gulp.task('image', () =>
       progressive: true,
       interlaced: true,
     })))
-    .pipe(gulp.dest('dist/'))
-);
-
-gulp.task('img', () =>
-  gulp.src('./src/imgs/**/*')
-  .pipe(gulp.dest('./dist/imgs'))
+    .pipe(gulp.dest('dist/imgs'))
 );
 
 gulp.task('create-blank-pages', () => {
@@ -121,7 +116,7 @@ gulp.task('watch', ['build'], () => {
     gulp.start('pug');
   });
   watch('./src/imgs/**/*', () => {
-    gulp.start('img');
+    gulp.start('image');
   });
   watch('./src/js/**/*.js', () => {
     gulp.start('js');
@@ -141,5 +136,5 @@ gulp.task('serve', ['watch'], () => {
   });
 });
 
-gulp.task('build', ['pug', 'sass', 'js', 'img', 'favicon']);
+gulp.task('build', ['pug', 'sass', 'js', 'image', 'favicon']);
 gulp.task('default', ['serve']);
