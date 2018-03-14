@@ -1,4 +1,4 @@
-# foundation
+# Sting
 
 ## Quickstart
 
