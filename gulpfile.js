@@ -20,7 +20,11 @@ gulp.task('pug', () => {
   gulp.src('./src/pug/pages/**/[^_]*.pug')
     .pipe(plumber())
     .pipe(pugLinter())
-    .pipe(pugLinter.reporter(notify.onError('Pug Lint Error')))
+    .pipe(pugLinter.reporter((errors) => {
+      if (errors.length) {
+        notify.onError('Pug Lint Error');
+      }
+    }))
     .pipe(pug({
       basedir: './src/pug',
     }))
