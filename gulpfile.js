@@ -57,7 +57,7 @@ gulp.task('js', () => {
         ],
       },
       output: {
-        filename: 'bundle.js',
+        filename: 'script.js',
       },
     }))
     .pipe(gulp.dest('dist/'));
