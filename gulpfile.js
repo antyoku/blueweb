@@ -4,6 +4,7 @@ const pug = require('gulp-pug');
 const favicons = require('gulp-favicons');
 const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
+const cache = require('gulp-cached');
 const watch = require('gulp-watch');
 const template = require('gulp-template');
 const plumber = require('gulp-plumber');
