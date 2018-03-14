@@ -117,10 +117,10 @@ gulp.task('watch', ['build'], () => {
   watch('./src/scss/**/*.scss', () => {
     gulp.start('sass');
   });
-  watch('./src/html/**/*.pug', () => {
+  watch('./src/pug/**/*.pug', () => {
     gulp.start('pug');
   });
-  watch('./src/imgs/**/*', () => {
+  watch('./src/images/**/*', () => {
     gulp.start('image');
   });
   watch('./src/js/**/*.js', () => {
