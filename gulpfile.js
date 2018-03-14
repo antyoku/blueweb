@@ -114,7 +114,7 @@ gulp.task('favicon', () => {
 });
 
 gulp.task('watch', ['build'], () => {
-  watch('./src/css/**/*.scss', () => {
+  watch('./src/scss/**/*.scss', () => {
     gulp.start('sass');
   });
   watch('./src/html/**/*.pug', () => {
