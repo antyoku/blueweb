@@ -1,8 +1,8 @@
 {
-  "name": "foundation",
+  "name": "sting",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:Update-hub/foundation.git",
+  "repository": "git@github.com:Update-hub/sting.git",
   "author": "Daichi Ninomiya <daichi.ninomiya@deer.co.jp>",
   "license": "MIT",
   "devDependencies": {
