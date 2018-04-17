@@ -63,6 +63,11 @@ gulp.task('js', () => {
     .pipe(gulp.dest('dist/'));
 });
 
+gulp.task('image-copy', () =>
+  gulp.src('./src/images/**/*')
+    .pipe(gulp.dest('dist/imgs'))
+);
+
 gulp.task('image', () =>
   gulp.src('./src/images/**/*')
     .pipe(cache(imagemin({
@@ -121,7 +126,7 @@ gulp.task('watch', ['build'], () => {
     gulp.start('pug');
   });
   watch('./src/images/**/*', () => {
-    gulp.start('image');
+    gulp.start('image-copy');
   });
   watch('./src/js/**/*.js', () => {
     gulp.start('js');
@@ -141,5 +146,6 @@ gulp.task('serve', ['watch'], () => {
   });
 });
 
-gulp.task('build', ['pug', 'sass', 'js', 'image', 'favicon']);
+gulp.task('build', ['pug', 'sass', 'js', 'image-copy', 'favicon']);
+gulp.task('release', ['build', 'image']);
 gulp.task('default', ['serve']);
