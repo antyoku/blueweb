@@ -146,6 +146,6 @@ gulp.task('serve', ['watch'], () => {
   });
 });
 
-gulp.task('build', ['pug', 'sass', 'js', 'image-copy', 'favicon']);
-gulp.task('release', ['build', 'image']);
+gulp.task('build', ['pug', 'sass', 'js', 'image-copy']);
+gulp.task('release', ['build', 'image', 'favicon']);
 gulp.task('default', ['serve']);
