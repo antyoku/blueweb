@@ -29,5 +29,8 @@
     "gulp-template": "^5.0.0",
     "gulp-watch": "^5.0.0",
     "webpack-stream": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp-wait": "^0.0.2"
   }
 }

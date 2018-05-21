@@ -15,6 +15,7 @@ const getCSV = require('get-csv');
 const rename = require('gulp-rename');
 const pugLinter = require('gulp-pug-linter');
 const notify = require('gulp-notify');
+const wait = require('gulp-wait');
 
 gulp.task('pug', () => {
   gulp.src('./src/pug/pages/**/[^_]*.pug')
@@ -33,6 +34,7 @@ gulp.task('pug', () => {
 
 gulp.task('sass', () => {
   gulp.src('./src/scss/style.scss')
+    .pipe(wait(500))
     .pipe(plumber())
     .pipe(sass())
     .pipe(cleanCSS({
