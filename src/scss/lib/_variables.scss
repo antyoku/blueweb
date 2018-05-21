@@ -1,0 +1,11 @@
+body {
+  font-size:14px;
+}
+.arrow {
+  &::before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f105';
+  font-weight: 700;
+  padding: 3px;
+  }
+}
