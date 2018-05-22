@@ -40,7 +40,7 @@ gulp.task('sass', () => {
     .pipe(cleanCSS({
       level: 2,
     }))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist/css/'));
 });
 
 gulp.task('js', () => {
@@ -62,7 +62,7 @@ gulp.task('js', () => {
         filename: 'script.js',
       },
     }))
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('dist/js/'));
 });
 
 gulp.task('image-copy', () =>
