@@ -8,4 +8,12 @@ body {
   font-weight: 700;
   padding: 3px;
   }
+  &--down {
+    &::after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f107';
+    font-weight: 700;
+    padding: 3px;
+    }
+  }
 }

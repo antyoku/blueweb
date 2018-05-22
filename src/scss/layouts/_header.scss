@@ -1,18 +1,17 @@
 .header {
   color: #fff;
   background: #323276;
-  height: 190px;
+  box-shadow:0px 0px 3px 3px #e1e1e2;
   &-inner {
     box-sizing: border-box;
     max-width: 1280px;
-    height: 100px;
     margin: 0 auto;
     padding: 0 20px;
   }
   &-site-nav {
     display: flex;
     justify-content: flex-end;
-    font-size: 14px;
+    font-size: 12px;
     padding: 15px 0;
     &__item {
       margin-left: 16px;
@@ -21,6 +20,7 @@
   &-main {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     &__logo {
       margin-right: 26px;
       margin-bottom: 13px;
@@ -30,13 +30,19 @@
       line-height: 100%;
       background: #fff;
       margin-right: 14px;
+      &__wrap {
+        display:flex;
+      }
       &__sort {
         height: 32px;
       }
       &__input {
         border: none;
-        width: 68%;
+        width:185px;
         height: 30px;
+        @include pc {
+          width: 68%;
+        }
       }
     }
     &__btn {
@@ -50,6 +56,50 @@
       &--calender {
         width: 120px;
       }
+    }
+  }
+  &-keywords {
+    line-height:1.2;
+    &__container {
+      background: #2a2a6a;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content: center;
+      align-items: center;
+      min-height:40px;
+      box-sizing:border-box;
+      padding:0 20px;
+      p {
+        padding:13px 12px;
+        font-size:12px;
+        display:inline-block;
+        color:#8383a9;
+      }
+      span {
+        font-size:13px;
+        padding:13px 12px;
+      }
+    }
+  }
+  &-nav {
+    background: #fff;
+    color:#323276;
+    box-sizing: border-box;
+    &__container {
+      max-width:1280px;
+      margin:0 auto;
+      background: url(./imgs/separate-line.gif) no-repeat left center;
+    }
+    &__item {
+      display:inline-block;
+      box-sizing: border-box;
+      background: url(./imgs/separate-line.gif) no-repeat right center;
+      height:50px;
+      width:calc(100% / 12);
+      font-size:12px;
+      font-weight:bold;
+      line-height:50px;
+      text-align:center;
     }
   }
   a:link {
