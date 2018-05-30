@@ -1,7 +1,10 @@
 .header {
   color: #fff;
   background: #323276;
-  box-shadow:0px 0px 3px 3px #e1e1e2;
+  box-shadow: 0px 0px 3px 3px #e1e1e2;
+  @include sp {
+    display: none;
+  }
   &-inner {
     box-sizing: border-box;
     max-width: 1280px;
@@ -31,14 +34,14 @@
       background: #fff;
       margin-right: 14px;
       &__wrap {
-        display:flex;
+        display: flex;
       }
       &__sort {
         height: 32px;
       }
       &__input {
         border: none;
-        width:185px;
+        width: 185px;
         height: 30px;
         @include pc {
           width: 68%;
@@ -59,49 +62,49 @@
     }
   }
   &-keywords {
-    line-height:1.2;
+    line-height: 1.2;
     &__container {
       background: #2a2a6a;
-      display:flex;
-      flex-wrap:wrap;
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      min-height:40px;
-      box-sizing:border-box;
-      padding:0 20px;
+      min-height: 40px;
+      box-sizing: border-box;
+      padding: 0 20px;
       p {
-        padding:13px 12px;
-        font-size:12px;
-        display:inline-block;
-        color:#8383a9;
+        padding: 13px 12px;
+        font-size: 12px;
+        display: inline-block;
+        color: #8383a9;
       }
       span {
-        font-size:13px;
-        padding:13px 12px;
+        font-size: 13px;
+        padding: 13px 12px;
       }
     }
   }
   &-nav {
     background: #fff;
-    color:#323276;
+    color: #323276;
     box-sizing: border-box;
     &__container {
-      display:flex;
+      display: flex;
       flex-wrap: wrap;
-      max-width:1280px;
-      margin:0 auto;
+      max-width: 1280px;
+      margin: 0 auto;
       background: url(../imgs/separate-line.gif) no-repeat left center;
     }
     &__item {
       box-sizing: border-box;
       background: url(../imgs/separate-line.gif) no-repeat right center;
-      height:50px;
-      width:calc(100% / 12);
-      min-width:95px;
-      font-size:12px;
-      font-weight:bold;
-      line-height:50px;
-      text-align:center;
+      height: 50px;
+      width: calc(100% / 12);
+      min-width: 95px;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 50px;
+      text-align: center;
     }
   }
   a:link {
@@ -110,4 +113,120 @@
   a:visited {
     color: #fff;
   }
+}
+
+.sp-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #323276;
+  height: 72px;
+  @include pc {
+    display: none;
+  }
+  &__logo {
+    box-sizing: border-box;
+    padding-right: 10px;
+    max-width: 290px;
+    text-align: right;
+    img {
+      max-width: 75%;
+    }
+  }
+  &__menu-btn {
+    position: absolute;
+    width: 34px;
+    height: 30px;
+    top: calc(50%-(30/2));
+    left: 20px;
+  }
+  &-nav {
+    display: none;
+    z-index: 999;
+    box-sizing: border-box;
+    background: #323276;
+    color: #fff;
+    &--active {
+      display: block;
+    }
+    @include pc {
+      display: none;
+    }
+  }
+  &-search {
+    width: 100%;
+    line-height: 44px;
+    background: #fff;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 20px;
+      padding-bottom: 20px;
+    }
+    &__sort {
+      height: 44px;
+    }
+    &__input {
+      border: none;
+      width: 185px;
+      height: 30px;
+      @include pc {
+        width: 68%;
+      }
+      @include sp {
+        width: 68%;
+      }
+    }
+  }
+  &__btn {
+    font-size: 16px;
+    margin: 2px;
+    height: 44px;
+    line-height: 42px;
+    font-weight: bold;
+  }
+  &-keywords {
+    line-height: 1.2;
+    &__container {
+      background: #2a2a6a;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      min-height: 40px;
+      box-sizing: border-box;
+      padding: 0 20px;
+      padding-bottom:20px;
+      p {
+        padding: 13px 12px;
+        font-size: 12px;
+        display: block;
+        color: #8383a9;
+      }
+    }
+    &-items {
+      margin-top:10px;
+      display:block;
+      span {
+        font-size: 13px;
+        padding: 13px 12px;
+      }
+    }
+  }
+  &-main-nav {
+    &__item {
+      display:block;
+      padding:20px;
+      box-sizing:border-box;
+    }
+  }
+}
+
+.menu-icon {
+  font-size: 30px;
 }

@@ -1,5 +1,15 @@
+@mixin sp() {
+  @media screen and (max-width:640px) {
+    @content;
+  }
+}
 @mixin pc() {
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 721px) {
+    @content;
+  }
+}
+@mixin tab() {
+  @media screen and (min-width:641px) {
     @content;
   }
 }
