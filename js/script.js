@@ -68,10 +68,28 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-// import template from './template';
+
+
+var _main = __webpack_require__(1);
+
+var _main2 = _interopRequireDefault(_main);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _main2.default)(); // import template from './template';
 
 // template();
 
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+$('.js-accordion-trigger').on('click', function () {
+  $('.sp-header-nav').toggleClass('sp-header-nav--active');
+});
 
 /***/ })
 /******/ ]);
