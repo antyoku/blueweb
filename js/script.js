@@ -70,15 +70,21 @@
 "use strict";
 
 
-var _main = __webpack_require__(1);
+var _header = __webpack_require__(1);
+
+var _header2 = _interopRequireDefault(_header);
+
+var _main = __webpack_require__(2);
 
 var _main2 = _interopRequireDefault(_main);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _main2.default)(); // import template from './template';
+(0, _header2.default)(); // import template from './template';
 
 // template();
+
+(0, _main2.default)();
 
 /***/ }),
 /* 1 */
@@ -89,6 +95,36 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 $('.js-accordion-trigger').on('click', function () {
   $('.sp-header-nav').toggleClass('sp-header-nav--active');
+});
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+$('.slick-box').slick({
+  infinite: true,
+  centerMode: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  dots: true,
+  arrows: true,
+  variableWidth: true,
+  responsive: [{
+    breakpoint: 640,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: false,
+      infinite: true,
+      dots: true,
+      arrows: false,
+      touchMove: true,
+      variableWidth: false
+    }
+  }]
 });
 
 /***/ })
